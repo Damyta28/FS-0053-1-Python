@@ -63,12 +63,20 @@ print("-" * len(titulo))
 
 # Set no permite valores repetidos (no arroja error, pero ignora los duplicados)
 lenguajes = { "Python", "JavaScript", "PHP", "C#", "Elixir", "Java", "Python" }
+
 print(lenguajes)
 
 print(f"El tipo de dato es: {type(lenguajes)}")
 
 lista_duplicada = [1, 2, 3, 4, 1, 6, 1]
-print(set(lista_duplicada))
+lista_valores_unico = set(lista_duplicada)
+
+print(lista_valores_unico)
+
+lista_valores_unico.add(5)
+print(lista_valores_unico)
+
+
 
 
 # --------------------------------------------------------
