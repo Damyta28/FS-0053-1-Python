@@ -75,9 +75,68 @@ print(lista_valores_unico)
 
 lista_valores_unico.add(5)
 print(lista_valores_unico)
-
-
+print()
 
 
 # --------------------------------------------------------
 # Diccionario
+titulo = "Diccionarios (dict)"
+print(titulo)
+print("-" * len(titulo))
+
+estudiante = {
+    "nombre": "Romina",
+    "edad": 35,
+    "curso": "Python"
+}
+
+print(estudiante)
+
+print(f"El tipo de dato es: {type(estudiante)}")
+
+# Lista de diccionario
+dict1 = {
+    "nombre": "Romina",
+    "edad": 35,
+    "curso": "Python"
+}
+
+dict2 = {
+    "nombre": "Rosario",
+    "edad": 30,
+    "curso": "Base de datos"
+}
+
+data = [dict1, dict2]
+
+data_json = {
+    "status": "ok",
+    "mensaje": "Lista de estudiantes",
+    "data": data
+}
+
+
+print("\nEsto es una lista de diccionarios")
+print(data)
+print()
+
+print("\nEsto es una lista de diccionario dentro de otro diccionario (JSON)")
+print(data_json)
+print()
+
+# Acceder a un valor del dict
+
+# Forma 1: Llamando directamente la clave
+print( f"1. El nombre del estudiante es: {estudiante ['nombre']}" )
+
+# Que pasa si la clave no existe
+# print(f"2. El nombre del estudiante es: {estudiante ['apellido']}")
+
+# Forma 2: Usando .get()
+print( f"3. El nombre del estudiante es: {estudiante.get('nombre','')      }" )
+print( f"4. El nombre del estudiante es: {estudiante.get ('apellido','N/A')}" )
+
+# Cambiar el valor de una clave
+estudiante["edad"] = 40
+
+print( f"La nueva dedad del estudiante es: {estudiante.get('edad')}")
