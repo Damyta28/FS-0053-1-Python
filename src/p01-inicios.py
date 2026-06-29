@@ -131,5 +131,3 @@ suma_otro = (
 print(suma_str)
 print(suma_otro)
 
-
-

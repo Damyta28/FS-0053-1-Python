@@ -13,14 +13,14 @@
 - [X] Conectar repositorio local
    - "git remote -v"  Me aseguro de no tner conexion remota
    - "git remote add origen https..."
-- [ ] Actualizar repositorio remoto
+- [X] Actualizar repositorio remoto
+   - "git push --set-upstream origin main"
 
 ### Flujo de trabajo diario
 
-- [ ] Crear una nueva rama en el repositorio local
-- [ ] Actualizar rama remota
-- [ ] Crear un PR
-- [ ] Trabajar
-- [ ] Actualizar remoto
+- [X] Crear una nueva rama en el repositorio local
+- [X] Trabajar en los ejercicios de la clase
+- [X] Actualizar remoto
+- [X] Crear un PR
 - [ ] Hacer "merge" del PR
 - [ ] Acualizar repo local
