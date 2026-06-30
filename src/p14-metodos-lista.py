@@ -60,4 +60,18 @@ color_eliminado = colores.pop(2)
 
 print( "Lista", colores)
 print(f"Color eliminado: {color_eliminado}")
+print()
 
+print( "Metodo remove" )
+print( "-------------" )
+
+# Recibe el valor a eliminar
+# Elimina la primera ocurrencia
+# Retorna none
+# Si el valor no existe se genera un error
+
+numeros = [ 100, 400, 50, 200, 50, 300 ]
+
+numero_eleminado = numeros.remove(50)
+
+print( "Lista", numeros)
