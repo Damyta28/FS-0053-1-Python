@@ -52,4 +52,32 @@ diccionario_c = {"edad": 40}
 diccionario_a.update(diccionario_c)
 
 print("Diccionario actualizado:", diccionario_a)
-                 
+
+print()
+print( "Metodo Keys()" )
+print( "-------------" )
+
+# Devuelve las claves de un diccionario  
+# El objeto devuleto se puede:
+# - Iterar
+# - Validar contenido
+# - Enlazado dinamicamente  
+
+llaves = diccionario_a.keys()
+print("Llaves del diccionario:", list(llaves))
+
+# Se puede iterar
+for aux in llaves:
+    print(aux)  
+
+# Validar si existe una llave
+if "celular" not in llaves:
+    print("La clave 'celular' no existe en el diccionario")
+    print("Actualizando dict... Agregano nuevo elemento")
+    diccionario['celular'] = 140000
+
+    print("NUevo diccionari", diccionario)
+    print("La variable llaves se actualiza dinamicamente")
+    
+
+
