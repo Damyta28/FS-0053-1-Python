@@ -35,3 +35,21 @@ print( "Diccionario original", diccionario)
 valor_eliminado = diccionario.pop("celular")
 print (" - Eliminado 'celular'", diccionario)
 print(f"Valor de 'celular' = {valor_eliminado}")
+
+
+print()
+print( "Actualizar diccionarios" )
+print( "-----------------" )
+
+diccionario_a = {"nomre": "Alejandra", "Apellido": "Lopez", "Edad": 33, "Altura": 1.55}
+diccionario_b = {"mascota": "MITI", "ejercicio": "bicicleta"}
+
+diccionario_a.update(diccionario_b)
+
+print("Diccionario actualizado:", diccionario_a)
+
+diccionario_c = {"edad": 40}
+diccionario_a.update(diccionario_c)
+
+print("Diccionario actualizado:", diccionario_a)
+                 
