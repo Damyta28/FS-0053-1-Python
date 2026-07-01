@@ -88,3 +88,21 @@ print( "--------------" )
 valores = diccionario_a.values()
 print("Valores del diccionario:", list(valores))
 
+print()
+print( "Metodo items()" )
+print( "--------------" )
+
+# Tiene un comportamiento similar a Keys y Values
+# Regresa una lista de tuplas (clave, valor)
+
+lista = diccionario.items()
+print("Lista de tuplas (clave, valor):", list(lista))
+
+for clave, valor in diccionario.items():
+    print(f"Clave: {clave}, Valor: {valor}")
+
+for i, (item) in enumerate(diccionario.items()):
+    print(f"Elemento {i}: Clave: {item[0]}, Valor: {item[1]}")
+
+
+
