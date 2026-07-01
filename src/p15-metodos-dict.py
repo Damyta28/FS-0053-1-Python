@@ -76,8 +76,15 @@ if "celular" not in llaves:
     print("Actualizando dict... Agregano nuevo elemento")
     diccionario['celular'] = 140000
 
-    print("NUevo diccionari", diccionario)
-    print("La variable llaves se actualiza dinamicamente")
-    
+print("NUevo diccionari", diccionario)
+print("La variable llaves se actualiza dinamicamente")
 
+print()
+print( "Metodo value()" )
+print( "--------------" )
+
+# Comportamiento similar a Keys
+
+valores = diccionario_a.values()
+print("Valores del diccionario:", list(valores))
 
