@@ -1,7 +1,8 @@
 # Mostrar menu por consola
 def mostrar_menu(x: str = "Cualquier cosa") -> None:
     """
-    Muestra un menu de opciones por consola
+    Muestra un menu de opciones por consola\n
+    x = Pregunta a ser realizada
     """
     print(x)
     print("Seleccione una opción:")
@@ -25,8 +26,7 @@ preguntas = [
 
 respuestas = []
 
-for pregunta in preguntas:
-    print(pregunta)
+for pregunta in preguntas:  
     prueba = mostrar_menu()
     respuestas.append(input('> '))
 
