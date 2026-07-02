@@ -17,22 +17,25 @@ def msj_error(texto, valor_error):
     print("Los valores ingresados deben ser numeros enteros")
     print(f"{texto} numero es: {valor_error}")
 
+def sumar_dos_numeros(n1, n2):
+    suma = int(n1) + int(n2)
+    return suma
+
 # -------------------
 n1 = input ("Ingrese el primer número: ")
 n2 = input ("Ingrese el segundo número: ")
 
 if not es_numero(n1):
     msj_error("Primero", n1)
+    sys.exit() 
 
 if not es_numero(n2):
     msj_error("Segundo", n2)
+    sys.exit()
 
-if es_numero(n1) and es_numero(n2):
     n1 = int(n1)
     n2 = int(n2)
     
-    suma = int(n1) + int(n2)
+    suma = sumar_dos_numeros(n1, n2)
     
-    print(f"La suma de {n1} y {n2} es: {suma}")
-else:
-    print("Por favor, ingrese números válidos.")
+    print(f"La suma de los números es: {suma}")
