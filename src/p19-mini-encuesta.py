@@ -24,20 +24,12 @@ preguntas = [
     ]
 
 respuestas = []
+for pregunta in preguntas:
+    print(pregunta)
+    prueba = mostrar_menu()
+    respuestas.append(input('> '))
 
 
-
-print(preguntas[0])
-prueba = mostrar_menu()
-respuestas.append(input('> '))
-
-print(preguntas[1])
-prueba = mostrar_menu("Hola x")
-respuestas.append(input('> '))
-
-print(preguntas[2])
-prueba = mostrar_menu()
-respuestas.append(input('> '))
 
 print(f"La respuesta a la pregunta 1 es: {respuestas[0]}")
 print(f"La respuesta a la pregunta 2 es: {respuestas[1]}")
