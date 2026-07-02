@@ -24,14 +24,16 @@ preguntas = [
     ]
 
 respuestas = []
+
 for pregunta in preguntas:
     print(pregunta)
     prueba = mostrar_menu()
     respuestas.append(input('> '))
 
+print()
+print("Las respuestas son:")
+print("-------------------")
+for i, respuesta in enumerate(respuestas):
+    print(f"Pregunta {i + 1}: {respuesta}")
 
-
-print(f"La respuesta a la pregunta 1 es: {respuestas[0]}")
-print(f"La respuesta a la pregunta 2 es: {respuestas[1]}")
-print(f"La respuesta a la pregunta 3 es: {respuestas[2]}")
-print(f"El valor devuelto por la funcion es: {prueba}")
+print("Muchas gracias por participar en la encuesta")
