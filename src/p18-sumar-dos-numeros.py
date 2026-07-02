@@ -27,11 +27,11 @@ n2 = input ("Ingrese el segundo número: ")
 
 if not es_numero(n1):
     msj_error("Primero", n1)
-    sys.exit() 
+  
 
 if not es_numero(n2):
     msj_error("Segundo", n2)
-    sys.exit()
+ 
 
     n1 = int(n1)
     n2 = int(n2)
