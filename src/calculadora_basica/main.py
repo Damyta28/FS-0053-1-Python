@@ -40,15 +40,19 @@ if opcion in ("1", "2", "3", "4"):
     if opcion == "1":
         # si utilizamos solo import
         # modulo funcion
-        sumar.sumar(x, y)
+        resp = sumar.sumar(x, y)
+        print(f"El resultado de la suma es: {resp}")
     elif opcion == "2":
         # Si importamos con from
         # funcion
-        restar(x, y)
+        resp = restar(x, y)
+        print(f"El resultado de la resta es: {resp}")
     elif opcion == "3":
-        multiplicar(x, y)
+        resp = multiplicar(x, y)
+        print(f"El resultado de la multiplicación es: {resp}")
     elif opcion == "4":
-        dividir(x, y)
+        resp = dividir(x, y)
+        print(f"El resultado de la división es: {resp}")
     elif opcion == "5":
         print("Saliendo de la calculadora...")
 else:

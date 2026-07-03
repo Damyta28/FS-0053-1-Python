@@ -1,2 +1,4 @@
 def restar(x, y):
-    print(f"El resultado de la resta es: {x - y}")
+    # Al sacr el print() de la funcion y restornar 
+    # el resultado de la suma, ahora la funcion cumple con el principio de responsabilidad unica   
+    return x - y
