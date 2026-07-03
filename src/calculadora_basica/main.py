@@ -26,24 +26,28 @@ print("5. Salir")
 
 opcion = input(">")
 
-if opcion == "1":
+
+# Realizamos esta refactorizacion para tener un solo punto
+# de ingreso de datos del usuario
+# mas adelante vamos a cambiar la opcion tomar_datos()
+# entonces debemos asegurar tener un solo punto de ingreso de datos del usuario
+
+if opcion in ("1", "2", "3", "4"):
     x, y = tomar_datos()
-    sumar(x, y)
-elif opcion == "2":
-    x, y = tomar_datos()
-    restar(x, y)
-elif opcion == "3":
-    x, y = tomar_datos()
-    multiplicar(x, y)
-elif opcion == "4":
-    x, y = tomar_datos()
-    dividir(x, y)
-elif opcion == "5":
-    print("Saliendo de la calculadora...")
+    if opcion == "1":
+        sumar(x, y)
+    elif opcion == "2":
+        restar(x, y)
+    elif opcion == "3":
+        multiplicar(x, y)
+    elif opcion == "4":
+        dividir(x, y)
+    elif opcion == "5":
+        print("Saliendo de la calculadora...")
 else:
     print("Opción no válida. Por favor, seleccione una opción válida.")
 
-    
+
 # Tipado de int y float
 
  
