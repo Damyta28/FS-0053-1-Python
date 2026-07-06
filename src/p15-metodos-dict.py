@@ -1,108 +1,110 @@
-print( "Agregar elementos a un diccionario (dict)" )
-print( "-----------------------------------------" )
+print()
+print("Agregar elementos a un diccionario (dict)")
+print("-----------------------------------------")
 
-# Cuando haceos referencia a la clave de un dict
-# que no existe, lo agrega
-#
-diccionario = { "llave 1": 5 }
+# Cuando hacemos referencia a la clave de un dict
+# que no existe, la agrega
 
-print( diccionario )
+diccionario = {"llave 1": 5}
 
-diccionario[ "llave 2"] = 9
+print(diccionario)
 
-print( diccionario )
+diccionario["llave 2"] = 9
+
+print(diccionario)
 
 print()
-print( "Cambiar calor de una clave de un diccionario (dict)" )
-print( "---------------------------------------------------" )
+print("Cambiar valor de una clave de un diccionario (dict)")
+print("---------------------------------------------------")
 
-diccionario["llave2"] = 18
+diccionario["llave 2"] = 18
 
-print( diccionario )
+print(diccionario)
 
 print()
-print( "Eliminar elemento" )
-print( "-----------------" )
+print("Eliminar elementos")
+print("------------------")
 
-# Metodo pop
+diccionario = {
+    "celular": 140000,
+    "notebook": 489990,
+    "tablet": 120000,
+    "cargador": 12400,
+}
+print("Diccionario original", diccionario)
 
-diccionario = {"celular": 140000, "notebook": 489990, "tablet": 120000, "cargador": 12400 }
-print( "Diccionario original", diccionario)
-
-# Metodod pop
-# Elimina un elemnto de un dict usando la clave 'key'
+# Método pop()
+# Elimina un elemento de un dict usando la clave `key`
 # y devuelve el valor de dicho elemento
 valor_eliminado = diccionario.pop("celular")
-print (" - Eliminado 'celular'", diccionario)
+print(" - Eliminado 'celular", diccionario)
 print(f"Valor de 'celular' = {valor_eliminado}")
 
-
 print()
-print( "Actualizar diccionarios" )
-print( "-----------------" )
+print("Actualizar diccionarios")
+print("-----------------------")
 
-diccionario_a = {"nomre": "Alejandra", "Apellido": "Lopez", "Edad": 33, "Altura": 1.55}
-diccionario_b = {"mascota": "MITI", "ejercicio": "bicicleta"}
+diccionario_a = {"nombre": "Alejandra", "apellido": "López", "edad": 33, "altura": 1.55}
+diccionario_b = {"mascota": "miti", "ejercicio": "bicicleta"}
 
 diccionario_a.update(diccionario_b)
 
-print("Diccionario actualizado:", diccionario_a)
+print("Diccionario actualizado", diccionario_a)
 
 diccionario_c = {"edad": 40}
 diccionario_a.update(diccionario_c)
 
-print("Diccionario actualizado:", diccionario_a)
+print("Diccionario actualizado", diccionario_a)
 
 print()
-print( "Metodo Keys()" )
-print( "-------------" )
+print("Método `keys()`")
+print("---------------")
 
-# Devuelve las claves de un diccionario  
-# El objeto devuleto se puede:
-# - Iterar
-# - Validar contenido
-# - Enlazado dinamicamente  
+# Devuelve las clave de un diccionario
+# El objeto devuelto se puede:
+#  - Iterar
+#  - Validar contenido
+#  - Enlazado dinámicamente
 
-llaves = diccionario_a.keys()
-print("Llaves del diccionario:", list(llaves))
+llaves = diccionario.keys()
+print(llaves)
 
 # Se puede iterar
 for aux in llaves:
-    print(aux)  
+    print(aux)
 
 # Validar si existe una llave
 if "celular" not in llaves:
-    print("La clave 'celular' no existe en el diccionario")
-    print("Actualizando dict... Agregano nuevo elemento")
-    diccionario['celular'] = 140000
+    print("No existe la llave de [celular]")
+    print("Actualizando dict... Agregando nuevo elemento...")
+    diccionario["celular"] = 140_000
 
-print("NUevo diccionari", diccionario)
-print("La variable llaves se actualiza dinamicamente")
-
-print()
-print( "Metodo value()" )
-print( "--------------" )
-
-# Comportamiento similar a Keys
-
-valores = diccionario_a.values()
-print("Valores del diccionario:", list(valores))
+print("Nuevo diccionario", diccionario)
+print("La variable llaves se actualiza dinámicamente", llaves)
 
 print()
-print( "Metodo items()" )
-print( "--------------" )
+print("Método `value()`")
+print("----------------")
 
-# Tiene un comportamiento similar a Keys y Values
-# Regresa una lista de tuplas (clave, valor)
+# Comportamiento similar a keys()
+
+valores = diccionario.values()
+print(valores)
+
+print()
+print("Método `items()`")
+print("----------------")
+
+# Tiene un comportamiento similar a keys() y values()
+# Regresa una tupla
 
 lista = diccionario.items()
-print("Lista de tuplas (clave, valor):", list(lista))
+print(lista)
 
 for clave, valor in diccionario.items():
-    print(f"Clave: {clave}, Valor: {valor}")
+    print(f"- {clave}: {valor}")
 
-for i, (item) in enumerate(diccionario.items()):
-    print(f"Elemento {i}: Clave: {item[0]}, Valor: {item[1]}")
-
+for i, item in enumerate(diccionario.items()):
+    print(f"- {i} {item[0]}: {item[1]}")
 
 

@@ -1,39 +1,37 @@
-# Mostrar menu por consola
-def mostrar_menu(x: str = "Cualquier cosa") -> None:
+# Mostrar menú por consola
+def imprimir_menu(x: str = "Valor predeterminado") -> None:
     """
-    Muestra un menu de opciones por consola\n
+    Muestra menú de opciones en la consola\n
     x = Pregunta a ser realizada
     """
     print(x)
-    print("Seleccione una opción:")
-    print("1. De acuerdo")
-    print("2. En desacuerdo")
-    print("3. No me interesa")
+    print('Opciones: ')
+    print('1). De acuerdo')
+    print('2). En desacuerdo')
+    print('3). No me interesa')
 
-# Python simepre regresa un valor desde una funcion
-# En el caso de no ser especificado, Python retorna
-# None
-# return 1
-
-
-# Documentar funcion
+    # Python siempre regresa un valor desde una función
+    # En el caso de no ser especificado, Pyhton retorna
+    # None
+    # return 1
 
 preguntas = [
-    "Enunciado pregunta 1",
-    "Enunciado pregunta 2",
-    "Enunciado pregunta 3"
-    ]
+    "Enunciado Pregunta 1",
+    "Enunciado Pregunta 2",
+    "Enunciado Pregunta 3",
+    "¿Esto es otra pregunta?"
+]
 
 respuestas = []
 
-for pregunta in preguntas:  
-    prueba = mostrar_menu()
+for p in preguntas:
+    prueba = imprimir_menu(p)
     respuestas.append(input('> '))
 
 print()
 print("Las respuestas son:")
 print("-------------------")
-for i, respuesta in enumerate(respuestas):
-    print(f"Pregunta {i + 1}: {respuesta}")
+for i, r in enumerate(respuestas):
+    print( f"- {preguntas[i]} es: {r}" )
 
-print("Muchas gracias por participar en la encuesta")
+print( "Muchas gracias por responder la encuesta")

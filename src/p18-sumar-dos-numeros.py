@@ -1,41 +1,48 @@
-# Código original: src/sumar-dos-numeros.py
-# Hacemos que trabaje con funciones
-# Refactorizacion
-# - Validacion del valor ingresado
+import sys
 
-# La funcion valida si un valor es un número de tipo entero (int)
+# Código orginal: src/sumar-dos-numeros.py
+# Hacemos que trabaje con funciones
+# Refactorización
+# - Validación del valor ingresado
+# - Mensaje de error
+# - Funcion sumar
+
+
+# La función valida si un valor es de tipo entero (int)
 # Retorno tipo booleano
-# - Entero = True
-def es_numero(valor):
+#  - Entero = True
+def es_entero(valor):
     return valor.isdigit()
 
-# Muetra un mesaje de rror en consola
-# texto = Posicion de ingreso del valor
-# valor_error = Valor ingresado
+
+# Muestra un mensaje de error en consola
+# texto = Posición de ingreso del valor
+# valor_error = El valor que da error
 def msj_error(texto, valor_error):
-    print("Error!!!")
-    print("Los valores ingresados deben ser numeros enteros")
-    print(f"{texto} numero es: {valor_error}")
+    print("Error!!!!")
+    print("Los valores ingresados deben ser números enteros")
+    print(f"{texto} número es: [{valor_error}]")
 
-def sumar_dos_numeros(n1, n2):
-    suma = int(n1) + int(n2)
-    return suma
 
-# -------------------
-n1 = input ("Ingrese el primer número: ")
-n2 = input ("Ingrese el segundo número: ")
+def sumar(n1, n2):
+    return n1 + n2
 
-if not es_numero(n1):
-    msj_error("Primero", n1)
-  
 
-if not es_numero(n2):
-    msj_error("Segundo", n2)
- 
+# -- - ----------
+numero1 = input("Ingrese el primer número entero:")
+numero2 = input("Ingrese el segundo número entero:")
 
-    n1 = int(n1)
-    n2 = int(n2)
-    
-    suma = sumar_dos_numeros(n1, n2)
-    
-    print(f"La suma de los números es: {suma}")
+if not es_entero(numero1):
+    msj_error("Primero", numero1)
+    sys.exit()
+
+if not es_entero(numero2):
+    msj_error("Segundo", numero2)
+    sys.exit()
+
+numero_1 = int(numero1)
+numero_2 = int(numero2)
+
+suma = sumar(numero_1, numero_2)
+
+print(f"La suma de los números es: {suma}")
